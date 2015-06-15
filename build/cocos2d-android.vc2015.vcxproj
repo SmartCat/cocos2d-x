@@ -54,20 +54,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>..\cocos;..\cocos\platform;..\external\freetype2\include\android\freetype2;..\external\freetype2\include\android;..\external\tinyxml2;..\external\ConvertUTF;..\external\unzip;..\external\png\include\android;..\external\tiff\include\android;..\external\jpeg\include\android;..\external\webp\include\android;$(NDKRoot)sources\android\cpufeatures;$(IncludePath)</IncludePath>
+    <IncludePath>..\cocos;..\cocos\platform;..\external\freetype2\include\android\freetype2;..\external\freetype2\include\android;..\external\xxhash;..\external\tinyxml2;..\external\ConvertUTF;..\external\unzip;..\external\png\include\android;..\external\tiff\include\android;..\external\jpeg\include\android;..\external\webp\include\android;$(NDKRoot)sources\android\cpufeatures;$(IncludePath)</IncludePath>
     <TargetName>libcocos2dx</TargetName>
     <LibraryPath>$(StlLibraryPath);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\4.8\armv7-a;$(NDKRoot)platforms\$(AndroidAPILevel)\arch-arm\usr\lib;..\external\jpeg\prebuilt\android\$(TargetArchAbi)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
       <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -88,13 +90,15 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -111,22 +115,31 @@
     <ClInclude Include="..\cocos\2d\CCActionProgressTimer.h" />
     <ClInclude Include="..\cocos\2d\CCActionTiledGrid.h" />
     <ClInclude Include="..\cocos\2d\CCActionTween.h" />
+    <ClInclude Include="..\cocos\2d\CCAnimation.h" />
+    <ClInclude Include="..\cocos\2d\CCAnimationCache.h" />
     <ClInclude Include="..\cocos\2d\CCAtlasNode.h" />
+    <ClInclude Include="..\cocos\2d\CCCamera.h" />
     <ClInclude Include="..\cocos\2d\CCClippingNode.h" />
     <ClInclude Include="..\cocos\2d\CCClippingRectangleNode.h" />
     <ClInclude Include="..\cocos\2d\CCDrawingPrimitives.h" />
     <ClInclude Include="..\cocos\2d\CCDrawNode.h" />
+    <ClInclude Include="..\cocos\2d\CCFastTMXLayer.h" />
+    <ClInclude Include="..\cocos\2d\CCFastTMXTiledMap.h" />
     <ClInclude Include="..\cocos\2d\CCFontFNT.h" />
+    <ClInclude Include="..\cocos\2d\CCGrabber.h" />
+    <ClInclude Include="..\cocos\2d\CCGrid.h" />
     <ClInclude Include="..\cocos\2d\CCLabel.h" />
     <ClInclude Include="..\cocos\2d\CCLabelAtlas.h" />
     <ClInclude Include="..\cocos\2d\CCLabelBMFont.h" />
     <ClInclude Include="..\cocos\2d\CCLabelTTF.h" />
     <ClInclude Include="..\cocos\2d\CCLayer.h" />
+    <ClInclude Include="..\cocos\2d\CCLight.h" />
     <ClInclude Include="..\cocos\2d\CCMenu.h" />
     <ClInclude Include="..\cocos\2d\CCMenuItem.h" />
     <ClInclude Include="..\cocos\2d\CCMotionStreak.h" />
     <ClInclude Include="..\cocos\2d\CCNode.h" />
     <ClInclude Include="..\cocos\2d\CCNodeGrid.h" />
+    <ClInclude Include="..\cocos\2d\CCParallaxNode.h" />
     <ClInclude Include="..\cocos\2d\CCParticleBatchNode.h" />
     <ClInclude Include="..\cocos\2d\CCParticleExamples.h" />
     <ClInclude Include="..\cocos\2d\CCParticleSystem.h" />
@@ -135,6 +148,16 @@
     <ClInclude Include="..\cocos\2d\CCProtectedNode.h" />
     <ClInclude Include="..\cocos\2d\CCRenderTexture.h" />
     <ClInclude Include="..\cocos\2d\CCScene.h" />
+    <ClInclude Include="..\cocos\2d\CCSprite.h" />
+    <ClInclude Include="..\cocos\2d\CCSpriteBatchNode.h" />
+    <ClInclude Include="..\cocos\2d\CCSpriteFrame.h" />
+    <ClInclude Include="..\cocos\2d\CCSpriteFrameCache.h" />
+    <ClInclude Include="..\cocos\2d\CCTextFieldTTF.h" />
+    <ClInclude Include="..\cocos\2d\CCTileMapAtlas.h" />
+    <ClInclude Include="..\cocos\2d\CCTMXLayer.h" />
+    <ClInclude Include="..\cocos\2d\CCTMXObjectGroup.h" />
+    <ClInclude Include="..\cocos\2d\CCTMXTiledMap.h" />
+    <ClInclude Include="..\cocos\2d\CCTMXXMLParser.h" />
     <ClInclude Include="..\cocos\2d\CCTransition.h" />
     <ClInclude Include="..\cocos\2d\CCTransitionPageTurn.h" />
     <ClInclude Include="..\cocos\2d\CCTransitionProgress.h" />
@@ -177,6 +200,16 @@
     <ClInclude Include="..\cocos\base\CCVector.h" />
     <ClInclude Include="..\cocos\base\ZipUtils.h" />
     <ClInclude Include="..\cocos\cocos2d.h" />
+    <ClInclude Include="..\cocos\deprecated\CCArray.h" />
+    <ClInclude Include="..\cocos\deprecated\CCBool.h" />
+    <ClInclude Include="..\cocos\deprecated\CCDeprecated.h" />
+    <ClInclude Include="..\cocos\deprecated\CCDictionary.h" />
+    <ClInclude Include="..\cocos\deprecated\CCDouble.h" />
+    <ClInclude Include="..\cocos\deprecated\CCFloat.h" />
+    <ClInclude Include="..\cocos\deprecated\CCInteger.h" />
+    <ClInclude Include="..\cocos\deprecated\CCNotificationCenter.h" />
+    <ClInclude Include="..\cocos\deprecated\CCSet.h" />
+    <ClInclude Include="..\cocos\deprecated\CCString.h" />
     <ClInclude Include="..\cocos\math\CCAffineTransform.h" />
     <ClInclude Include="..\cocos\math\CCGeometry.h" />
     <ClInclude Include="..\cocos\math\CCVertex.h" />
@@ -212,6 +245,7 @@
     <ClInclude Include="..\cocos\renderer\CCRenderer.h" />
     <ClInclude Include="..\cocos\renderer\ccShaders.h" />
     <ClInclude Include="..\cocos\renderer\CCTexture2D.h" />
+    <ClInclude Include="..\cocos\renderer\CCTextureAtlas.h" />
     <ClInclude Include="..\cocos\renderer\CCTextureCache.h" />
     <ClInclude Include="..\cocos\renderer\CCTrianglesCommand.h" />
     <ClInclude Include="..\cocos\renderer\CCVertexIndexBuffer.h" />
@@ -233,22 +267,31 @@
     <ClCompile Include="..\cocos\2d\CCActionProgressTimer.cpp" />
     <ClCompile Include="..\cocos\2d\CCActionTiledGrid.cpp" />
     <ClCompile Include="..\cocos\2d\CCActionTween.cpp" />
+    <ClCompile Include="..\cocos\2d\CCAnimation.cpp" />
+    <ClCompile Include="..\cocos\2d\CCAnimationCache.cpp" />
     <ClCompile Include="..\cocos\2d\CCAtlasNode.cpp" />
+    <ClCompile Include="..\cocos\2d\CCCamera.cpp" />
     <ClCompile Include="..\cocos\2d\CCClippingNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCClippingRectangleNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCDrawingPrimitives.cpp" />
     <ClCompile Include="..\cocos\2d\CCDrawNode.cpp" />
+    <ClCompile Include="..\cocos\2d\CCFastTMXLayer.cpp" />
+    <ClCompile Include="..\cocos\2d\CCFastTMXTiledMap.cpp" />
     <ClCompile Include="..\cocos\2d\CCFontFNT.cpp" />
+    <ClCompile Include="..\cocos\2d\CCGrabber.cpp" />
+    <ClCompile Include="..\cocos\2d\CCGrid.cpp" />
     <ClCompile Include="..\cocos\2d\CCLabel.cpp" />
     <ClCompile Include="..\cocos\2d\CCLabelAtlas.cpp" />
     <ClCompile Include="..\cocos\2d\CCLabelBMFont.cpp" />
     <ClCompile Include="..\cocos\2d\CCLabelTTF.cpp" />
     <ClCompile Include="..\cocos\2d\CCLayer.cpp" />
+    <ClCompile Include="..\cocos\2d\CCLight.cpp" />
     <ClCompile Include="..\cocos\2d\CCMenu.cpp" />
     <ClCompile Include="..\cocos\2d\CCMenuItem.cpp" />
     <ClCompile Include="..\cocos\2d\CCMotionStreak.cpp" />
     <ClCompile Include="..\cocos\2d\CCNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCNodeGrid.cpp" />
+    <ClCompile Include="..\cocos\2d\CCParallaxNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCParticleBatchNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCParticleExamples.cpp" />
     <ClCompile Include="..\cocos\2d\CCParticleSystem.cpp" />
@@ -257,6 +300,16 @@
     <ClCompile Include="..\cocos\2d\CCProtectedNode.cpp" />
     <ClCompile Include="..\cocos\2d\CCRenderTexture.cpp" />
     <ClCompile Include="..\cocos\2d\CCScene.cpp" />
+    <ClCompile Include="..\cocos\2d\CCSprite.cpp" />
+    <ClCompile Include="..\cocos\2d\CCSpriteBatchNode.cpp" />
+    <ClCompile Include="..\cocos\2d\CCSpriteFrame.cpp" />
+    <ClCompile Include="..\cocos\2d\CCSpriteFrameCache.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTextFieldTTF.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTileMapAtlas.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTMXLayer.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTMXObjectGroup.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTMXTiledMap.cpp" />
+    <ClCompile Include="..\cocos\2d\CCTMXXMLParser.cpp" />
     <ClCompile Include="..\cocos\2d\CCTransition.cpp" />
     <ClCompile Include="..\cocos\2d\CCTransitionPageTurn.cpp" />
     <ClCompile Include="..\cocos\2d\CCTransitionProgress.cpp" />
@@ -291,6 +344,12 @@
     <ClCompile Include="..\cocos\base\CCValue.cpp" />
     <ClCompile Include="..\cocos\base\ZipUtils.cpp" />
     <ClCompile Include="..\cocos\cocos2d.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCArray.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCDeprecated.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCDictionary.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCNotificationCenter.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCSet.cpp" />
+    <ClCompile Include="..\cocos\deprecated\CCString.cpp" />
     <ClCompile Include="..\cocos\math\CCAffineTransform.cpp" />
     <ClCompile Include="..\cocos\math\CCGeometry.cpp" />
     <ClCompile Include="..\cocos\math\CCVertex.cpp" />
@@ -318,6 +377,7 @@
     <ClCompile Include="..\cocos\renderer\CCRenderer.cpp" />
     <ClCompile Include="..\cocos\renderer\ccShaders.cpp" />
     <ClCompile Include="..\cocos\renderer\CCTexture2D.cpp" />
+    <ClCompile Include="..\cocos\renderer\CCTextureAtlas.cpp" />
     <ClCompile Include="..\cocos\renderer\CCTextureCache.cpp" />
     <ClCompile Include="..\cocos\renderer\CCTrianglesCommand.cpp" />
     <ClCompile Include="..\cocos\renderer\CCVertexIndexBuffer.cpp" />
