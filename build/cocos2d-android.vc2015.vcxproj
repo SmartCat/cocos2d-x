@@ -70,10 +70,12 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ANDROID;USE_FILE32API;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <Verbose>false</Verbose>
+      <EnableNeonCodegen>false</EnableNeonCodegen>
+      <FloatABI>softfp</FloatABI>
     </ClCompile>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -163,6 +165,7 @@
     <ClInclude Include="..\cocos\2d\CCTransitionProgress.h" />
     <ClInclude Include="..\cocos\2d\CCTweenFunction.h" />
     <ClInclude Include="..\cocos\base\base64.h" />
+    <ClInclude Include="..\cocos\base\CCAsyncTaskPool.h" />
     <ClInclude Include="..\cocos\base\CCAutoreleasePool.h" />
     <ClInclude Include="..\cocos\base\ccCArray.h" />
     <ClInclude Include="..\cocos\base\ccConfig.h" />
@@ -170,11 +173,13 @@
     <ClInclude Include="..\cocos\base\CCConsole.h" />
     <ClInclude Include="..\cocos\base\CCData.h" />
     <ClInclude Include="..\cocos\base\CCDirector.h" />
+    <ClInclude Include="..\cocos\base\CCEvent.h" />
     <ClInclude Include="..\cocos\base\CCEventAcceleration.h" />
     <ClInclude Include="..\cocos\base\CCEventCustom.h" />
     <ClInclude Include="..\cocos\base\CCEventDispatcher.h" />
     <ClInclude Include="..\cocos\base\CCEventFocus.h" />
     <ClInclude Include="..\cocos\base\CCEventKeyboard.h" />
+    <ClInclude Include="..\cocos\base\CCEventListener.h" />
     <ClInclude Include="..\cocos\base\CCEventListenerAcceleration.h" />
     <ClInclude Include="..\cocos\base\CCEventListenerCustom.h" />
     <ClInclude Include="..\cocos\base\CCEventListenerFocus.h" />
@@ -194,6 +199,7 @@
     <ClInclude Include="..\cocos\base\CCRef.h" />
     <ClInclude Include="..\cocos\base\CCRefPtr.h" />
     <ClInclude Include="..\cocos\base\CCScheduler.h" />
+    <ClInclude Include="..\cocos\base\CCScriptSupport.h" />
     <ClInclude Include="..\cocos\base\ccTypes.h" />
     <ClInclude Include="..\cocos\base\CCUserDefault.h" />
     <ClInclude Include="..\cocos\base\ccUTF8.h" />
@@ -218,10 +224,18 @@
     <ClInclude Include="..\cocos\math\Mat4.h" />
     <ClInclude Include="..\cocos\math\MathUtil.h" />
     <ClInclude Include="..\cocos\math\Quaternion.h" />
+    <ClInclude Include="..\cocos\math\TransformUtils.h" />
     <ClInclude Include="..\cocos\math\Vec2.h" />
     <ClInclude Include="..\cocos\math\Vec3.h" />
     <ClInclude Include="..\cocos\math\Vec4.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsBody.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsContact.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsHelper.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsJoint.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsShape.h" />
+    <ClInclude Include="..\cocos\physics\CCPhysicsWorld.h" />
     <ClInclude Include="..\cocos\platform\android\CCApplication-android.h" />
+    <ClInclude Include="..\cocos\platform\android\CCFileUtils-android.h" />
     <ClInclude Include="..\cocos\platform\android\CCGL-android.h" />
     <ClInclude Include="..\cocos\platform\android\CCGLViewImpl-android.h" />
     <ClInclude Include="..\cocos\platform\android\CCStdC-android.h" />
@@ -234,12 +248,14 @@
     <ClInclude Include="..\cocos\platform\CCPlatformMacros.h" />
     <ClInclude Include="..\cocos\platform\CCSAXParser.h" />
     <ClInclude Include="..\cocos\platform\CCThread.h" />
+    <ClInclude Include="..\cocos\renderer\CCBatchCommand.h" />
     <ClInclude Include="..\cocos\renderer\CCCustomCommand.h" />
     <ClInclude Include="..\cocos\renderer\CCGLProgram.h" />
     <ClInclude Include="..\cocos\renderer\CCGLProgramCache.h" />
     <ClInclude Include="..\cocos\renderer\CCGLProgramState.h" />
     <ClInclude Include="..\cocos\renderer\ccGLStateCache.h" />
     <ClInclude Include="..\cocos\renderer\CCGroupCommand.h" />
+    <ClInclude Include="..\cocos\renderer\CCMeshCommand.h" />
     <ClInclude Include="..\cocos\renderer\CCPrimitive.h" />
     <ClInclude Include="..\cocos\renderer\CCPrimitiveCommand.h" />
     <ClInclude Include="..\cocos\renderer\CCQuadCommand.h" />
@@ -254,6 +270,9 @@
     <ClInclude Include="..\cocos\renderer\CCVertexIndexBuffer.h" />
     <ClInclude Include="..\cocos\renderer\CCVertexIndexData.h" />
     <ClInclude Include="..\external\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="..\external\unzip\ioapi.h" />
+    <ClInclude Include="..\external\unzip\ioapi_mem.h" />
+    <ClInclude Include="..\external\unzip\unzip.h" />
     <ClInclude Include="..\external\xxhash\xxhash.h" />
   </ItemGroup>
   <ItemGroup>
@@ -318,17 +337,20 @@
     <ClCompile Include="..\cocos\2d\CCTransitionProgress.cpp" />
     <ClCompile Include="..\cocos\2d\CCTweenFunction.cpp" />
     <ClCompile Include="..\cocos\base\base64.cpp" />
+    <ClCompile Include="..\cocos\base\CCAsyncTaskPool.cpp" />
     <ClCompile Include="..\cocos\base\CCAutoreleasePool.cpp" />
     <ClCompile Include="..\cocos\base\ccCArray.cpp" />
     <ClCompile Include="..\cocos\base\CCConfiguration.cpp" />
     <ClCompile Include="..\cocos\base\CCConsole.cpp" />
     <ClCompile Include="..\cocos\base\CCData.cpp" />
     <ClCompile Include="..\cocos\base\CCDirector.cpp" />
+    <ClCompile Include="..\cocos\base\CCEvent.cpp" />
     <ClCompile Include="..\cocos\base\CCEventAcceleration.cpp" />
     <ClCompile Include="..\cocos\base\CCEventCustom.cpp" />
     <ClCompile Include="..\cocos\base\CCEventDispatcher.cpp" />
     <ClCompile Include="..\cocos\base\CCEventFocus.cpp" />
     <ClCompile Include="..\cocos\base\CCEventKeyboard.cpp" />
+    <ClCompile Include="..\cocos\base\CCEventListener.cpp" />
     <ClCompile Include="..\cocos\base\CCEventListenerAcceleration.cpp" />
     <ClCompile Include="..\cocos\base\CCEventListenerCustom.cpp" />
     <ClCompile Include="..\cocos\base\CCEventListenerFocus.cpp" />
@@ -342,6 +364,7 @@
     <ClCompile Include="..\cocos\base\CCProfiling.cpp" />
     <ClCompile Include="..\cocos\base\CCRef.cpp" />
     <ClCompile Include="..\cocos\base\CCScheduler.cpp" />
+    <ClCompile Include="..\cocos\base\CCScriptSupport.cpp" />
     <ClCompile Include="..\cocos\base\ccTypes.cpp" />
     <ClCompile Include="..\cocos\base\CCUserDefault.cpp" />
     <ClCompile Include="..\cocos\base\ccUTF8.cpp" />
@@ -361,21 +384,30 @@
     <ClCompile Include="..\cocos\math\Mat4.cpp" />
     <ClCompile Include="..\cocos\math\MathUtil.cpp" />
     <ClCompile Include="..\cocos\math\Quaternion.cpp" />
+    <ClCompile Include="..\cocos\math\TransformUtils.cpp" />
     <ClCompile Include="..\cocos\math\Vec2.cpp" />
     <ClCompile Include="..\cocos\math\Vec3.cpp" />
     <ClCompile Include="..\cocos\math\Vec4.cpp" />
+    <ClCompile Include="..\cocos\physics\CCPhysicsBody.cpp" />
+    <ClCompile Include="..\cocos\physics\CCPhysicsContact.cpp" />
+    <ClCompile Include="..\cocos\physics\CCPhysicsJoint.cpp" />
+    <ClCompile Include="..\cocos\physics\CCPhysicsShape.cpp" />
+    <ClCompile Include="..\cocos\physics\CCPhysicsWorld.cpp" />
     <ClCompile Include="..\cocos\platform\android\CCApplication-android.cpp" />
+    <ClCompile Include="..\cocos\platform\android\CCFileUtils-android.cpp" />
     <ClCompile Include="..\cocos\platform\android\CCGLViewImpl-android.cpp" />
     <ClCompile Include="..\cocos\platform\CCFileUtils.cpp" />
     <ClCompile Include="..\cocos\platform\CCImage.cpp" />
     <ClCompile Include="..\cocos\platform\CCSAXParser.cpp" />
     <ClCompile Include="..\cocos\platform\CCThread.cpp" />
+    <ClCompile Include="..\cocos\renderer\CCBatchCommand.cpp" />
     <ClCompile Include="..\cocos\renderer\CCCustomCommand.cpp" />
     <ClCompile Include="..\cocos\renderer\CCGLProgram.cpp" />
     <ClCompile Include="..\cocos\renderer\CCGLProgramCache.cpp" />
     <ClCompile Include="..\cocos\renderer\CCGLProgramState.cpp" />
     <ClCompile Include="..\cocos\renderer\ccGLStateCache.cpp" />
     <ClCompile Include="..\cocos\renderer\CCGroupCommand.cpp" />
+    <ClCompile Include="..\cocos\renderer\CCMeshCommand.cpp" />
     <ClCompile Include="..\cocos\renderer\CCPrimitive.cpp" />
     <ClCompile Include="..\cocos\renderer\CCPrimitiveCommand.cpp" />
     <ClCompile Include="..\cocos\renderer\CCQuadCommand.cpp" />
@@ -389,6 +421,9 @@
     <ClCompile Include="..\cocos\renderer\CCVertexIndexBuffer.cpp" />
     <ClCompile Include="..\cocos\renderer\CCVertexIndexData.cpp" />
     <ClCompile Include="..\external\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="..\external\unzip\ioapi.cpp" />
+    <ClCompile Include="..\external\unzip\ioapi_mem.cpp" />
+    <ClCompile Include="..\external\unzip\unzip.cpp" />
     <ClCompile Include="..\external\xxhash\xxhash.c" />
   </ItemGroup>
   <ItemGroup>
