@@ -76,6 +76,7 @@
       <Verbose>false</Verbose>
       <EnableNeonCodegen>false</EnableNeonCodegen>
       <FloatABI>softfp</FloatABI>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -234,6 +235,8 @@
     <ClInclude Include="..\cocos\base\CCValue.h" />
     <ClInclude Include="..\cocos\base\CCVector.h" />
     <ClInclude Include="..\cocos\base\etc1.h" />
+    <ClInclude Include="..\cocos\base\pvr.h" />
+    <ClInclude Include="..\cocos\base\s3tc.h" />
     <ClInclude Include="..\cocos\base\TGAlib.h" />
     <ClInclude Include="..\cocos\base\ZipUtils.h" />
     <ClInclude Include="..\cocos\cocos2d.h" />
@@ -438,6 +441,8 @@
     <ClCompile Include="..\cocos\base\ccUtils.cpp" />
     <ClCompile Include="..\cocos\base\CCValue.cpp" />
     <ClCompile Include="..\cocos\base\etc1.cpp" />
+    <ClCompile Include="..\cocos\base\pvr.cpp" />
+    <ClCompile Include="..\cocos\base\s3tc.cpp" />
     <ClCompile Include="..\cocos\base\TGAlib.cpp" />
     <ClCompile Include="..\cocos\base\ZipUtils.cpp" />
     <ClCompile Include="..\cocos\cocos2d.cpp" />

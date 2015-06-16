@@ -626,6 +626,12 @@
     <ClInclude Include="..\external\ConvertUTF\ConvertUTF.h">
       <Filter>external\ConvertUTF</Filter>
     </ClInclude>
+    <ClInclude Include="..\cocos\base\pvr.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\s3tc.h">
+      <Filter>base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\cocos\cocos2d.cpp" />
@@ -1195,6 +1201,12 @@
     </ClCompile>
     <ClCompile Include="..\external\ConvertUTF\ConvertUTFWrapper.cpp">
       <Filter>external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\pvr.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\s3tc.cpp">
+      <Filter>base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
