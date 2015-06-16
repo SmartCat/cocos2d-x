@@ -509,6 +509,123 @@
     <ClInclude Include="..\cocos\physics\CCPhysicsWorld.h">
       <Filter>physics</Filter>
     </ClInclude>
+    <ClInclude Include="..\cocos\platform\CCGL.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\CCGLView.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\renderer\CCGLProgramStateCache.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCFontAtlas.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCAABB.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCAnimate3D.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCAnimation3D.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCAttachNode.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCBillBoard.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCFrustum.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCMesh.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCMeshSkin.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCMeshVertexIndexData.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCOBB.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCPlane.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCRay.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCSkeleton3D.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCSprite3D.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\3d\CCSprite3DMaterial.h">
+      <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCFont.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCFontFreeType.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\edtaa3func\edtaa3func.h">
+      <Filter>external\edtaa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\CCTouch.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCFontAtlasCache.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCFontCharMap.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCLabelTextFormatter.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCComponentContainer.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\2d\CCComponent.h">
+      <Filter>2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\CCEventListenerController.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\TGAlib.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\android\jni\JniHelper.h">
+      <Filter>platform\android\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\ccFPSImages.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\atitc.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\android\jni\CocosPlayClient.h">
+      <Filter>platform\android\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\android\jni\Java_org_cocos2dx_lib_Cocos2dxHelper.h">
+      <Filter>platform\android\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\base\etc1.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\android\jni\DPIJni.h">
+      <Filter>platform\android\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos\platform\android\jni\IMEJni.h">
+      <Filter>platform\android\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\ConvertUTF\ConvertUTF.h">
+      <Filter>external\ConvertUTF</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\cocos\cocos2d.cpp" />
@@ -956,6 +1073,129 @@
     <ClCompile Include="..\cocos\physics\CCPhysicsWorld.cpp">
       <Filter>physics</Filter>
     </ClCompile>
+    <ClCompile Include="..\cocos\base\CCUserDefault-android.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\CCGLView.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\renderer\CCGLProgramStateCache.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCFontAtlas.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCAABB.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCAnimate3D.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCAnimation3D.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCAttachNode.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCBillBoard.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCFrustum.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCMesh.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCMeshSkin.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCMeshVertexIndexData.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCOBB.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCPlane.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCRay.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCSkeleton3D.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCSprite3D.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\3d\CCSprite3DMaterial.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCFont.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCFontFreeType.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\edtaa3func\edtaa3func.cpp">
+      <Filter>external\edtaa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\CCTouch.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCFontAtlasCache.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCFontCharMap.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\CCDevice-android.cpp">
+      <Filter>platform\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCLabelTextFormatter.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCComponentContainer.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\2d\CCComponent.cpp">
+      <Filter>2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\CCEventListenerController.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\TGAlib.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\jni\JniHelper.cpp">
+      <Filter>platform\android\jni</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\ccFPSImages.c">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\atitc.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\jni\CocosPlayClient.cpp">
+      <Filter>platform\android\jni</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\jni\Java_org_cocos2dx_lib_Cocos2dxHelper.cpp">
+      <Filter>platform\android\jni</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\base\etc1.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\jni\DPIJni.cpp">
+      <Filter>platform\android\jni</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos\platform\android\jni\IMEJni.cpp">
+      <Filter>platform\android\jni</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\ConvertUTF\ConvertUTF.c">
+      <Filter>external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\ConvertUTF\ConvertUTFWrapper.cpp">
+      <Filter>external\ConvertUTF</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="platform">
@@ -993,6 +1233,18 @@
     </Filter>
     <Filter Include="physics">
       <UniqueIdentifier>{781168eb-677e-4bed-96aa-f31aad1ed663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3d">
+      <UniqueIdentifier>{cc45e631-f7bf-4ce5-b1b7-15be0b72caa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\edtaa">
+      <UniqueIdentifier>{8bafaa30-120d-4be9-a20f-9dab89aab5de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\android\jni">
+      <UniqueIdentifier>{838484b6-c013-4c6c-bd8c-595ba9d788d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\ConvertUTF">
+      <UniqueIdentifier>{b3eb1d78-cbd5-4cd6-b61d-0b35e9e2a3df}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
